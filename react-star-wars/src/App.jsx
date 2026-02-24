@@ -1,14 +1,13 @@
 // REPLACED index.js with main.jsx, as REACT errored without main.jsx
-import API from "./services/sw-api.jsx"
-
+import StarShipCard from "./components/StarShipCard.jsx"
 
 
 
 function App(){
     return(
         <>
-        <h1>Hello!</h1>
-        <API/>
+            <h1>Star Wars Starships</h1>
+            <StarShipCard/>
         </>
     )
 }
