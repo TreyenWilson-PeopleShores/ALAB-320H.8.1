@@ -7,10 +7,10 @@ function DisplayToScreen(props){
     return(
     
         <div>
-            <ul>{props.name.map((ship, index)=>  
-                    <span className="ship" key={index}><li>{ship}</li></span>
+            {props.name.map((ship, index)=>  
+                    <span className="ship" key={index}>{ship}</span>
                 )}
-            </ul>
+           
             
         </div>
     )
