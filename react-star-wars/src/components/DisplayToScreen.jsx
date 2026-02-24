@@ -1,6 +1,9 @@
+import { useState, useEffect } from "react";
+
+
 function DisplayToScreen(props){
 
-
+    
     return(
     
         <div>
