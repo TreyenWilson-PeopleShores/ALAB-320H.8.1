@@ -11,7 +11,7 @@ const base_url = "https://swapi.dev/api/starships/?page="
 
 function API(props)
     {
-  
+        let shipNames = []
 
         let isNull = false;
         let pageNumber = 1;
@@ -29,7 +29,7 @@ function API(props)
                 const result = await response.json();
                 console.log(result.results);
                 {result.results.map((ship, index)=>  
-                <span className="ship" key={index}>{console.log("Here:", ship)}, <DisplayToScreen name={ship.name}/></span>
+                <span className="ship" key={index}>{shipNames.push(ship.name)}</span>
                     )
 
                 };
@@ -49,8 +49,14 @@ function API(props)
                 console.log(error)
             }
         }
-
+        
         getShip()
+
+        return(
+            <>
+            <DisplayToScreen name={shipNames}/>
+            </>
+        )
 
     }
 
